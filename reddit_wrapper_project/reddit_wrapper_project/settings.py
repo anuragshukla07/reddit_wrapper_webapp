@@ -41,9 +41,9 @@ INSTALLED_APPS = [
 ]
 
 REDDIT_API_CONFIG = {
-    'client_id': 'YOUR_CLIENT_ID',
-    'client_secret': 'YOUR_CLIENT_SECRET',
-    'user_agent': 'YOUR_USER_AGENT',
+    'client_id': '8OHFxVjWfG7usi62FIETWg',
+    'client_secret': 'XtIdKZ1t7tOomPK_-vHvk7ffxb2NHA',
+    'user_agent': 'draw_testing_agent',
 }
 
 MIDDLEWARE = [
