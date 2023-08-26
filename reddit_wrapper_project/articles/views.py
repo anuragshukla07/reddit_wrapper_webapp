@@ -13,10 +13,10 @@ class GetArticlesView(View):                                            #GetArti
         )
 
         subredditname = 'soccer'
-        subreddit = reddit.subreddit(subredditname)             #fetches subreddit threads
+        subreddit = reddit.subreddit(subredditname)                     #fetches subreddit threads
         threads = subreddit.new(limit=10)
 
-        articles = []                                                  #the thread fetches all the data from each thread and stores them in articles 
+        articles = []                                                   #the thread fetches all the data from each thread and stores them in articles 
         for thread in threads:
             articles.append({
                 'title': thread.title,
@@ -25,5 +25,5 @@ class GetArticlesView(View):                                            #GetArti
                 'link': thread.url
             })
 
-        return render(request, 'articles.html', {'articles': articles , 'subredditname': subredditname })
+        return render(request, 'articles.html', {'articles': articles , 'subredditname': subredditname })       #returns the rendered form of the incoming json data in the html format
         
