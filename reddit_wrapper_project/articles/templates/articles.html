@@ -62,17 +62,27 @@
 </head>
 <body>
     <div class="container">
-        <h1>Reddit Articles from '{{subredditname}}'</h1>
+        <h1>Reddit Articles from '{{ subredditname }}'</h1>
         <ul>
             {% for article in articles %}
             <li class="article">
                 <h2>{{ article.title }}</h2>
                 <p>Author: {{ article.author }}</p>
-                <p>Creation Date: {{ article.creation_date|date:"F j, Y, P" }}</p>
+                <p>Creation Date: <span class="creation-date" data-timestamp="{{ article.creation_date }}"></span></p>
                 <a href="{{ article.link }}" target="_blank">Read More</a>
             </li>
             {% endfor %}
         </ul>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const creationDateElements = document.querySelectorAll(".creation-date");
+            creationDateElements.forEach(element => {
+                const timestamp = parseInt(element.getAttribute("data-timestamp")) * 1000;
+                const formattedDate = new Date(timestamp).toLocaleString("en-IN");
+                element.textContent = formattedDate;
+            });
+        });
+    </script>
 </body>
 </html>
