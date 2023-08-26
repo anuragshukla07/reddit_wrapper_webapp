@@ -9,7 +9,7 @@ class GetArticlesView(View):                                            #GetArti
         reddit = praw.Reddit(                                           #initializes the connection with reddit api using praw library
             client_id=settings.REDDIT_API_CONFIG['client_id'],
             client_secret=settings.REDDIT_API_CONFIG['client_secret'],
-            user_agent=settings.REDDIT_API_CONFIG['user_agent']
+            user_agent=settings.REDDIT_API_CONFIG['user_agent']         #what is user agent?
         )
 
         subredditname = 'soccer'
