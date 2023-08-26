@@ -11,7 +11,7 @@ class GetArticlesView(View):                                            #GetArti
             user_agent=settings.REDDIT_API_CONFIG['user_agent']
         )
 
-        subreddit = reddit.subreddit('The_Subreddit_name')             #fetches subreddit threads
+        subreddit = reddit.subreddit('soccer')             #fetches subreddit threads
         threads = subreddit.new(limit=10)
 
         articles = []                                                  #the thread fetches all the data from each thread and stores them in articles 
@@ -19,8 +19,8 @@ class GetArticlesView(View):                                            #GetArti
             articles.append({
                 'title': thread.title,
                 'author': thread.author.name if thread.author else '[not available]',
-                'creation_date':thread.created_utc,
-                'link':thread.url
+                'creation_date': thread.created_utc,
+                'link': thread.url
             })
 
         return JsonResponse(articles,safe=False)

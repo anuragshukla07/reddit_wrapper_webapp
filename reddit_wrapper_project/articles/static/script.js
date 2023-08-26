@@ -1,6 +1,6 @@
 const articlesContainer = document.getElementById('articles');
 
-fetch('/get_articles')
+fetch('/articles/')
     .then(response => response.json())
     .then(articles => {
         articles.forEach(article => {
