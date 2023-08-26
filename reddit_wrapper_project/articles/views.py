@@ -9,7 +9,7 @@ class GetArticlesView(View):                                            #GetArti
         reddit = praw.Reddit(                                           #initializes the connection with reddit api using praw library
             client_id=settings.REDDIT_API_CONFIG['client_id'],
             client_secret=settings.REDDIT_API_CONFIG['client_secret'],
-            user_agent=settings.REDDIT_API_CONFIG['user_agent']         #what is user agent?
+            user_agent=settings.REDDIT_API_CONFIG['user_agent']         #a useragent tells the server what you are doing for a scrapper app it is not very imp
         )
 
         subredditname = 'soccer'
@@ -25,5 +25,5 @@ class GetArticlesView(View):                                            #GetArti
                 'link': thread.url
             })
 
-        return render(request, 'articles.html', {'articles': articles , 'subredditname': subredditname })       #returns the rendered form of the incoming json data in the html format
+        return render(request, 'articles.html', {'articles': articles , 'subredditname': subredditname })       #returns the rendered form of the incoming json data in the html page
         

@@ -9,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('DJANGO_SECRET_KEY')
+SECRET_KEY = config('DJANGO_SECRET_KEY')                                         #it is a unique key generated for every django project , it is stored seperately in .env file
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-REDDIT_API_CONFIG = {
+REDDIT_API_CONFIG = {                                                   #these are unique keys generated for every different reddit api app , they are stored seperately in .env file
     'client_id': config('REDDIT_CLIENT_ID'),
     'client_secret': config('REDDIT_CLIENT_SECRET'),
     'user_agent': config('REDDIT_USER_AGENT')
