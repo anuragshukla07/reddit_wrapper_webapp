@@ -1,7 +1,8 @@
 from django.http import JsonResponse                                    #is used to return JSON-encoded responses from a view.
 from django.views import View                                           #base class for creating class-based views in Django.
 import praw                                                             #Python Reddit API Wrapper used to interact with the Reddit API
-from django.conf import settings                                        #Imports the settings module, which provides access to Django's project settings
+from django.conf import settings   
+from django.shortcuts import render                                     #Imports the settings module, which provides access to Django's project settings
 
 class GetArticlesView(View):                                            #GetArticlesView inherits from View
     def get(self,request,*args, **kwargs):
@@ -11,7 +12,8 @@ class GetArticlesView(View):                                            #GetArti
             user_agent=settings.REDDIT_API_CONFIG['user_agent']
         )
 
-        subreddit = reddit.subreddit('soccer')             #fetches subreddit threads
+        subredditname = 'soccer'
+        subreddit = reddit.subreddit(subredditname)             #fetches subreddit threads
         threads = subreddit.new(limit=10)
 
         articles = []                                                  #the thread fetches all the data from each thread and stores them in articles 
@@ -23,5 +25,5 @@ class GetArticlesView(View):                                            #GetArti
                 'link': thread.url
             })
 
-        return JsonResponse(articles,safe=False)
-
+        return render(request, 'articles.html', {'articles': articles , 'subredditname': subredditname })
+        

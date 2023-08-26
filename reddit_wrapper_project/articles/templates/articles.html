@@ -4,10 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reddit Articles</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .article {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 15px 0;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <div id="articles"></div>
-    <script src="{% static 'script.js' %}"></script>
+    <div class="container">
+        <h1>Reddit Articles from '{{subredditname}}'</h1>
+        <ul>
+            {% for article in articles %}
+            <li class="article">
+                <h2>{{ article.title }}</h2>
+                <p>Author: {{ article.author }}</p>
+                <p>Creation Date: {{ article.creation_date|date:"F j, Y, P" }}</p>
+                <a href="{{ article.link }}" target="_blank">Read More</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 </body>
 </html>
