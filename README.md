@@ -56,13 +56,11 @@ You’ll see that the project is running successfully on your local server.
 You can change the name of the subreddit in the "views.py" file present in "reddit_wrapper_project\articles\views.py".
 
 ## Screenshots
-
+Original Subreddit Page
 ![Homepage](https://github.com/anuragshukla07/reddit_wrapper_webapp/blob/master/ScreenShots/Original%20-%201.jpg) 
-Original Subreddit Page
+Project Page
 ![Homepage](https://github.com/anuragshukla07/reddit_wrapper_webapp/blob/master/ScreenShots/Wrapper%20-1.jpg) 
-Project Page
-![Homepage](https://github.com/anuragshukla07/reddit_wrapper_webapp/blob/master/ScreenShots/Original%20-%202.jpg) 
 Original Subreddit Page
-![Homepage](https://github.com/anuragshukla07/reddit_wrapper_webapp/blob/master/ScreenShots/Wrapper%20-%202.jpg) 
+![Homepage](https://github.com/anuragshukla07/reddit_wrapper_webapp/blob/master/ScreenShots/Original%20-%202.jpg) 
 Project Page
-
+![Homepage](https://github.com/anuragshukla07/reddit_wrapper_webapp/blob/master/ScreenShots/Wrapper%20-%202.jpg) 
