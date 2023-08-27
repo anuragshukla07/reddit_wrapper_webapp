@@ -57,11 +57,8 @@ You can change the name of the subreddit in the "views.py" file present in "redd
 
 ## Screenshots
 
-![Homepage](https://github.com/anuragshukla07/reddit_wrapper_webapp/blob/master/ScreenShots/Original%20-%201.jpg)
-<center>Original Subreddit Page</center>
-![Homepage](https://github.com/anuragshukla07/reddit_wrapper_webapp/blob/master/ScreenShots/Wrapper%20-1.jpg)
-<center>Project Page</center>
-![Homepage](https://github.com/anuragshukla07/reddit_wrapper_webapp/blob/master/ScreenShots/Original%20-%202.jpg)
-<center>Original Subreddit Page</center>
-![Homepage](https://github.com/anuragshukla07/reddit_wrapper_webapp/blob/master/ScreenShots/Wrapper%20-%202.jpg)
-<center>Project Page</center>
+![Homepage](https://github.com/anuragshukla07/reddit_wrapper_webapp/blob/master/ScreenShots/Original%20-%201.jpg) <center>Original Subreddit Page</center>
+![Homepage](https://github.com/anuragshukla07/reddit_wrapper_webapp/blob/master/ScreenShots/Wrapper%20-1.jpg) <center>Project Page</center>
+![Homepage](https://github.com/anuragshukla07/reddit_wrapper_webapp/blob/master/ScreenShots/Original%20-%202.jpg) <center>Original Subreddit Page</center>
+![Homepage](https://github.com/anuragshukla07/reddit_wrapper_webapp/blob/master/ScreenShots/Wrapper%20-%202.jpg) <center>Project Page</center>
+
